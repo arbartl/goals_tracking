@@ -1,0 +1,12 @@
+<h1>Public Goals</h1>
+
+<ul>
+  <% @goals.each do |goal| %>
+  <% next if goal[:private] %>
+  <li><%= "Goal ID: #{goal[:id]} -- Goal Name: #{goal[:name]} -- Goal Amount: #{goal[:amount]}" %></li>
+  <% end %>
+</ul>
+
+<form action="/create_goal" method="get">
+  <button action="submit">Create a new Goal</button>
+</form>

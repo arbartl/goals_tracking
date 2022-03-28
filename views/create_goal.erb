@@ -1,0 +1,17 @@
+<form action="/create_goal" method="post">
+  <dl>
+    <dt><label for="goal_name">Goal Name</label></dt>
+    <dd><input name="goal_name" id="goal_name" type="text" /></dd>
+    
+    <dt><label for="goal_amount">Goal Amount</label></dt>
+    <dd><input name="goal_amount" id="goal_amount" type="number" min="0.01" max="99999.99" step="0.01" placeholder="0.00"/></dd>
+    
+    <dt><label for="private">Private ?</label></dt>
+    <dd><input name="private" id="true" type="radio" value="true" checked /><label for="true">True</label></dd>
+    <dd><input name="private" id="false" type="radio" value="false" /><label for="false">False</label></dd>
+
+    <dt><label for="creator_id">Creator ID</label></dt>
+    <dd><input name="creator_id" id="creator_id" type="text" /></dd>
+  </dl>
+  <button type="submit">Create Goal</button>
+</form>
